@@ -1,0 +1,39 @@
+<h1>Using Middleman With CodeSync</h1>
+
+<p>
+  Middleman is a great app for building static sites, and works great with CodeSync.
+  You can download a sample middleman app here: <a href="https://github.com/datapimp/codesync-example-middleman">Github</a>
+</p>
+
+
+<pre class="prettyprint">
+# Gemfile of your middleman app
+gem 'middleman-sprockets'
+gem 'code_sync', git:"git@github.com:datapimp/code_sync.git"
+</pre>
+
+<h3>Using code_sync with middleman:</h3>
+<p>Simply activate <code>:code_sync</code> in your config.</p>
+<pre class="prettyprint">
+# middleman config.rb
+activate :code_sync
+</pre>
+<p>And include the code_sync asset in your assets manifest:</p>
+<pre class="prettyprint">
+# middleman javascripts/site.coffee
+= require 'code_sync/dependencies'
+= require 'code_sync'
+
+new CodeSync.Client()
+</pre>
+
+<p>Running <code>bundle exec middleman</code> will result in:</p>
+<img src="http://bit.ly/1753YKf" />
+
+<p>Now any time you change any of your assets, the page will update to reflect your changes immediately.</p>
+
+<p>If you are runing the sample app yourself, you can change any of the files in the <code>source/javascripts</code> or <code>source/stylesheets</code> directory and watch those changes take effect here.</p>
+
+<h3>Editing your assets directly in the browser</h3>
+
+<p>You can activate the code sync in-browser editor by pressing <code>ctrl + j</code></p>
