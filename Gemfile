@@ -9,5 +9,4 @@ gem "haml"
 gem "sass"
 gem "kramdown"
 
-#gem "code_sync", git: "git@github.com:datapimp/code_sync.git"
-gem "code_sync", path: File.join(ENV['HOME'],'Projects','code_sync')
+gem "code_sync", git: "git@github.com:datapimp/code_sync.git"

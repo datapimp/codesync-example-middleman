@@ -1,7 +1,8 @@
-PATH
-  remote: /Users/jonathan/Projects/code_sync
+GIT
+  remote: git@github.com:datapimp/code_sync.git
+  revision: 96cd91c8cd1f4c50c293b5fb15b8f9ff0d8c68ca
   specs:
-    code_sync (0.2.0)
+    code_sync (0.3.0)
       faye
       listen
       rb-fsevent (~> 0.9)
