@@ -22,6 +22,11 @@ gem 'code_sync', git:"git@github.com:datapimp/code_sync.git"
 window.codeSync = new CodeSync.Client()
 &lt;script&gt;
 </pre>
+<p>Don't forget the CSS</p>
+<pre class="prettyprint">
+= stylesheet_include_tag 'code_sync'
+</pre>
+
 <p>From within your Rails directory</p>
 <pre class="prettyprint">
 bundle exec codesync start
@@ -61,6 +66,11 @@ activate :code_sync
 = require 'code_sync/editor'
 
 new CodeSync.Client()
+</pre>
+
+<p>Don't forget the CSS, if you want to use the editor</p>
+<pre class="prettyprint">
+= stylesheet_include_tag 'code_sync'
 </pre>
 
 <p>Running <code>bundle exec middleman</code> will result in:</p>
