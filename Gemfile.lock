@@ -1,7 +1,7 @@
 PATH
   remote: /Users/jonathan/Projects/code_sync
   specs:
-    code_sync (0.1.0)
+    code_sync (0.2.0)
       faye
       listen
       rb-fsevent (~> 0.9)
