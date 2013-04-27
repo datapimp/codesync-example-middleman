@@ -17,7 +17,7 @@ gem 'code_sync', git:"git@github.com:datapimp/code_sync.git"
 
 <p>And including the following javascript snippet in your ERB or HAML layout</p>
 <pre class="prettyprint">
-&lt;%= javascript_include_tag 'code_sync/dependencies', 'code_sync' &gt;
+&lt;%= javascript_include_tag 'code_sync', 'code_sync/editor' &gt;
 &lt;script type="text/javascript"&gt;
 window.codeSync = new CodeSync.Client()
 &lt;script&gt;
@@ -26,6 +26,12 @@ window.codeSync = new CodeSync.Client()
 <pre class="prettyprint">
 bundle exec codesync start
 </pre>
+<p>Or, if you prefer, just create an initializer:</p>
+<pre>
+# config/initializers/code_sync.rb
+CodeSync::Manager.start(sprockets: Rails.application.assets, forked: true)
+</pre>
+
 <h3>All set. Your asset pipeline changes will be pushed to your browser and be applied without refreshing the entire browser.</h3>
 
 <p>
@@ -50,6 +56,10 @@ activate :code_sync
 = require 'code_sync/dependencies'
 = require 'code_sync'
 
+# include the optional editor
+# to activate, press ctrl+j
+= require 'code_sync/editor'
+
 new CodeSync.Client()
 </pre>
 
@@ -63,4 +73,6 @@ new CodeSync.Client()
 
 <p>If you are runing the sample app yourself, you can change any of the files in the <code>source/javascripts</code> or <code>source/stylesheets</code> directory and watch those changes take effect here.</p>
 
+<h3>Using the in-browser editor</h3>
+<p>If you require the code_sync/editor asset in your manifest file, you will have an in browser editor for all of your assets available. Press ctrl+j to activate.</p>
 </div>

@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:datapimp/code_sync.git
-  revision: 96cd91c8cd1f4c50c293b5fb15b8f9ff0d8c68ca
+  revision: b4d93c9d1fd3bcfda14f65ba7c4501e7542b24a8
   specs:
     code_sync (0.3.0)
       faye
@@ -111,7 +111,7 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.3)
       tilt (~> 1.3, >= 1.3.3)
-    sprockets (2.9.2)
+    sprockets (2.9.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
